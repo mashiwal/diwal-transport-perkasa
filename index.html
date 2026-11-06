@@ -1,107 +1,567 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Domain For Sale - walnesia.com</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-    header {
-      background: #004aad;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #004aad;
-    }
-    .domain-info {
-      margin: 20px 0;
-      padding: 15px;
-      background: #eef5ff;
-      border-radius: 6px;
-    }
-    .cta {
-      text-align: center;
-      margin-top: 30px;
-    }
-    .cta a {
-      display: inline-block;
-      background: #004aad;
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s;
-      margin: 5px;
-    }
-    .cta a:hover {
-      background: #00337a;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #f1f1f1;
-      margin-top: 40px;
-      font-size: 0.9em;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT DIWAL TRANSPORT PERKASA - Layanan Transportasi & Logistik Terpercaya</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0B1D3A',
+                            900: '#0A2342', // Primary Logo Color
+                            950: '#061529',
+                        },
+                        accent: {
+                            blue: '#1D4ED8',
+                            hover: '#1E40AF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .glass-nav {
+            background: rgba(10, 35, 66, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
 
-<header>
-  <h1>Domain For Sale</h1>
-  <p><strong>walnesia.com</strong></p>
-</header>
+    <!-- Header Navigation -->
+    <header class="fixed w-full top-0 z-50 glass-nav text-white border-b border-slate-800 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo & Name -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <img src="assets/images/logo.jpg" alt="PT Diwal Transport Perkasa Logo" class="h-12 w-auto bg-white p-1 rounded-md shadow-sm group-hover:scale-105 transition-transform duration-200">
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight block text-white">DIWAL TRANSPORT</span>
+                        <span class="text-xs text-blue-300 font-medium tracking-wider block">PT DIWAL TRANSPORT PERKASA</span>
+                    </div>
+                </a>
 
-<section>
-  <h2>Get This Premium Domain!</h2>
-  <p>This domain is available for purchase. Perfect for your business, brand, or online project.</p>
+                <!-- Desktop Nav Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#hero" class="hover:text-blue-300 transition-colors" data-i18n="nav_home">Beranda</a>
+                    <a href="#about" class="hover:text-blue-300 transition-colors" data-i18n="nav_about">Tentang Kami</a>
+                    <a href="#services" class="hover:text-blue-300 transition-colors" data-i18n="nav_services">Layanan</a>
+                    <a href="#booking" class="hover:text-blue-300 transition-colors" data-i18n="nav_booking">Pemesanan</a>
+                    <a href="#contact" class="hover:text-blue-300 transition-colors" data-i18n="nav_contact">Kontak</a>
+                </nav>
 
-  <div class="domain-info">
-    <p><strong>Registered On:</strong> October 19, 2025</p>
-    <p><strong>Expires On:</strong> October 19, 2028</p>
-  </div>
+                <!-- Language Switcher & Action Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button id="langToggleBtn" class="flex items-center space-x-1 px-3 py-1.5 rounded-lg border border-slate-700 bg-navy-950/50 hover:bg-slate-800 text-xs font-semibold tracking-wider uppercase transition-colors">
+                        <i data-lucide="globe" class="w-4 h-4 text-blue-400"></i>
+                        <span id="langLabel">EN</span>
+                    </button>
+                    <a href="#booking" class="bg-accent-blue hover:bg-accent-hover px-5 py-2.5 rounded-lg text-sm font-semibold shadow-lg shadow-blue-900/30 transition-all duration-200 flex items-center space-x-2" data-i18n="btn_quick_book">
+                        <span>Pesan Sekarang</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
 
-  <h2>Why Choose This Domain?</h2>
-  <ul>
-    <li>Easy to remember</li>
-    <li>Professional and relevant</li>
-    <li>Ideal for long-term branding</li>
-  </ul>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <button id="mobileLangToggle" class="px-2.5 py-1 rounded border border-slate-700 text-xs font-semibold text-blue-300 uppercase">
+                        <span id="mobileLangLabel">EN</span>
+                    </button>
+                    <button id="mobileMenuBtn" class="p-2 rounded-md hover:bg-slate-800 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6 text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-  <h2>Contact Us</h2>
-  <p>Interested in buying this domain? Reach out to us:</p>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-navy-950 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="block py-2 text-base font-medium text-slate-200 hover:text-blue-400" data-i18n="nav_home">Beranda</a>
+            <a href="#about" class="block py-2 text-base font-medium text-slate-200 hover:text-blue-400" data-i18n="nav_about">Tentang Kami</a>
+            <a href="#services" class="block py-2 text-base font-medium text-slate-200 hover:text-blue-400" data-i18n="nav_services">Layanan</a>
+            <a href="#booking" class="block py-2 text-base font-medium text-slate-200 hover:text-blue-400" data-i18n="nav_booking">Pemesanan</a>
+            <a href="#contact" class="block py-2 text-base font-medium text-slate-200 hover:text-blue-400" data-i18n="nav_contact">Kontak</a>
+            <a href="#booking" class="block text-center bg-accent-blue py-3 rounded-lg font-semibold text-white mt-4" data-i18n="btn_quick_book">Pesan Sekarang</a>
+        </div>
+    </header>
 
-  <div class="cta">
-    <a href="mailto:prayogakeyza@gmail.com">Email Us</a>
-    <a href="https://t.me/afang168" target="_blank">Contact on Telegram</a>
-    <a href="https://wa.me/+6281515575558" target="_blank">Contact on WhatsApp</a>
-  </div>
-</section>
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-navy-900 via-navy-950 to-slate-900 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-blue-900/40 border border-blue-500/30 px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium text-blue-300">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-blue-400"></i>
+                    <span data-i18n="hero_badge">Layanan Transportasi & Pengiriman Resmi</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-tight text-white" data-i18n="hero_title">
+                    Solusi Transportasi Nyaman, Aman, & Tepat Waktu
+                </h1>
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-normal" data-i18n="hero_subtitle">
+                    PT DIWAL TRANSPORT PERKASA melayani perjalanan door to door, drop/jemput bandara, sewa mobil dengan sopir, serta pengiriman barang instan dengan pelayanan profesional.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#booking" class="bg-accent-blue hover:bg-accent-hover text-white px-8 py-3.5 rounded-xl font-bold shadow-xl shadow-blue-900/40 transition-all flex items-center justify-center space-x-2" data-i18n="hero_btn_reserve">
+                        <i data-lucide="calendar" class="w-5 h-5"></i>
+                        <span>Pesan Perjalanan Sekarang</span>
+                    </a>
+                    <a href="https://wa.me/628568848585" target="_blank" class="bg-slate-800/80 border border-slate-700 hover:bg-slate-800 text-white px-8 py-3.5 rounded-xl font-semibold transition-all flex items-center justify-center space-x-2">
+                        <i data-lucide="phone-call" class="w-5 h-5 text-green-400"></i>
+                        <span data-i18n="hero_btn_wa">WhatsApp 08568848585</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  &copy; 2026 walnesia.com – Domain For Sale
-</footer>
+    <!-- Company Profile Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-block text-accent-blue font-bold text-sm tracking-wider uppercase bg-blue-50 px-3 py-1 rounded-md" data-i18n="about_tag">PROFIL PERUSAHAAN</div>
+                    <h2 class="text-3xl font-extrabold text-navy-900 leading-tight" data-i18n="about_title">PT DIWAL TRANSPORT PERKASA</h2>
+                    <p class="text-slate-600 leading-relaxed" data-i18n="about_desc1">
+                        Kami adalah penyedia jasa transportasi dan logistik darat terpercaya yang berkomitmen penuh memberikan pelayanan terbaik. Berbasis di Sukabumi, kami menjangkau berbagai rute strategis dengan fokus utama pada kenyamanan, keamanan, dan efisiensi waktu perjalanan Anda.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed" data-i18n="about_desc2">
+                        Baik untuk keperluan pribadi, perjalanan dinas kantor, pengantaran bandara, maupun kebutuhan pengiriman paket instan, pengemudi profesional dan tim operasional kami siap melayani Anda 24 jam nonstop.
+                    </p>
+                    <div class="pt-2 grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-accent-blue mb-2"></i>
+                            <h4 class="font-bold text-navy-900" data-i18n="about_feat1_title">Jangkauan Luas</h4>
+                            <p class="text-xs text-slate-500 mt-1" data-i18n="about_feat1_desc">Sukabumi, Jabodetabek, & antar kota Jawa.</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <i data-lucide="clock" class="w-6 h-6 text-accent-blue mb-2"></i>
+                            <h4 class="font-bold text-navy-900" data-i18n="about_feat2_title">Layanan 24/7</h4>
+                            <p class="text-xs text-slate-500 mt-1" data-i18n="about_feat2_desc">Siap melayani kebutuhan transportasi kapan saja.</p>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Feature Highlights Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="p-6 bg-navy-900 text-white rounded-2xl shadow-xl space-y-3">
+                        <div class="w-12 h-12 bg-blue-600/30 rounded-xl flex items-center justify-center">
+                            <i data-lucide="shield" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-lg font-bold" data-i18n="stat_card1_title">100% Resmi & Terjamin</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed" data-i18n="stat_card1_desc">Berbadan hukum resmi PT dengan jaminan armada terawat dan pengemudi berpengalaman.</p>
+                    </div>
+
+                    <div class="p-6 bg-slate-900 text-white rounded-2xl shadow-xl space-y-3">
+                        <div class="w-12 h-12 bg-blue-600/30 rounded-xl flex items-center justify-center">
+                            <i data-lucide="user-check" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-lg font-bold" data-i18n="stat_card2_title">Sopir Profesional</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed" data-i18n="stat_card2_desc">Pengemudi ramah, paham rute tercepat, serta mengutamakan keselamatan penumpang.</p>
+                    </div>
+
+                    <div class="p-6 bg-slate-900 text-white rounded-2xl shadow-xl space-y-3">
+                        <div class="w-12 h-12 bg-blue-600/30 rounded-xl flex items-center justify-center">
+                            <i data-lucide="navigation" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-lg font-bold" data-i18n="stat_card3_title">Door to Door</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed" data-i18n="stat_card3_desc">Jemput langsung di depan alamat rumah Anda dan antar sampai tujuan akhir.</p>
+                    </div>
+
+                    <div class="p-6 bg-navy-900 text-white rounded-2xl shadow-xl space-y-3">
+                        <div class="w-12 h-12 bg-blue-600/30 rounded-xl flex items-center justify-center">
+                            <i data-lucide="zap" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-lg font-bold" data-i18n="stat_card4_title">Pengiriman Cepat</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed" data-i18n="stat_card4_desc">Kirim barang dan dokumen penting langsung sampai pada hari yang sama.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-accent-blue font-bold text-sm tracking-wider uppercase bg-blue-100 px-3 py-1 rounded-md" data-i18n="services_tag">LAYANAN UTAMA</span>
+                <h2 class="text-3xl font-extrabold text-navy-900" data-i18n="services_title">Pilihan Layanan Transportasi Kami</h2>
+                <p class="text-slate-600" data-i18n="services_subtitle">Solusi lengkap untuk segala jenis kebutuhan mobilitas penumpang dan barang Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent-blue">
+                            <i data-lucide="car" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900" data-i18n="s1_title">Carter / Rent Drop</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed" data-i18n="s1_desc">Layanan carter privat untuk satu rombongan tanpa gabung penumpang lain. Fleksibel menentukan waktu keberangkatan.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent-blue">
+                            <i data-lucide="home" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900" data-i18n="s2_title">Travel Door to Door</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed" data-i18n="s2_desc">Perjalanan reguler dengan penjemputan langsung di alamat rumah asal dan pengantaran tepat di depan pintu tujuan.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent-blue">
+                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900" data-i18n="s3_title">Sewa Mobil dengan Sopir</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed" data-i18n="s3_desc">Penyewaan unit lengkap dengan driver berpengalaman untuk perjalanan bisnis, dinas, maupun liburan keluarga.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent-blue">
+                            <i data-lucide="plane-takeoff" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900" data-i18n="s4_title">Drop Bandara</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed" data-i18n="s4_desc">Pengantaran tepat waktu menuju Bandara Soekarno-Hatta (CGK), Halim Perdanakusuma (HLP), maupun bandara lainnya.</p>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent-blue">
+                            <i data-lucide="plane-landing" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900" data-i18n="s5_title">Jemput Bandara</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed" data-i18n="s5_desc">Layanan penjemputan kedatangan di area pintu kelintasan bandara tanpa perlu repot mencari transportasi umum.</p>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent-blue">
+                            <i data-lucide="package" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900" data-i18n="s6_title">Kirim Barang Instan</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed" data-i18n="s6_desc">Pengiriman dokumen penting atau paket Kilat Door to Door langsung sampai pada hari yang sama (Same Day Service).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="booking" class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-navy-900 rounded-3xl p-6 sm:p-10 text-white shadow-2xl border border-slate-800">
+                <div class="text-center space-y-3 mb-8">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white" data-i18n="form_title">Formulir Pemesanan Layanan</h2>
+                    <p class="text-slate-300 text-sm" data-i18n="form_subtitle">Isi rute dan kebutuhan Anda di bawah ini untuk terhubung langsung dengan tim kami via WhatsApp.</p>
+                </div>
+
+                <form id="whatsappForm" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Nama Lengkap -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2" data-i18n="lbl_name">Nama Lengkap</label>
+                            <input type="text" id="custName" required placeholder="Contoh: Budi Santoso" class="w-full px-4 py-3 rounded-xl bg-navy-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-accent-blue transition-colors">
+                        </div>
+
+                        <!-- Layanan -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2" data-i18n="lbl_service">Pilih Layanan</label>
+                            <select id="custService" required class="w-full px-4 py-3 rounded-xl bg-navy-950 border border-slate-700 text-white focus:outline-none focus:border-accent-blue transition-colors">
+                                <option value="Travel Door to Door">Travel Door to Door</option>
+                                <option value="Carter Perjalanan">Carter Mobil / Rent Drop</option>
+                                <option value="Sewa Mobil + Sopir">Sewa Mobil + Sopir</option>
+                                <option value="Drop Bandara">Drop Bandara</option>
+                                <option value="Jemput Bandara">Jemput Bandara</option>
+                                <option value="Kirim Barang Instan">Kirim Barang Instan</option>
+                            </select>
+                        </div>
+
+                        <!-- Kota Asal -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2" data-i18n="lbl_origin">Lokasi Penjemputan (Asal)</label>
+                            <input type="text" id="custOrigin" required placeholder="Contoh: Sukabumi / Jakarta / Bandung" class="w-full px-4 py-3 rounded-xl bg-navy-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-accent-blue transition-colors">
+                        </div>
+
+                        <!-- Kota Tujuan -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2" data-i18n="lbl_destination">Lokasi Tujuan</label>
+                            <input type="text" id="custDestination" required placeholder="Contoh: Bandara Soekarno-Hatta / Bogor" class="w-full px-4 py-3 rounded-xl bg-navy-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-accent-blue transition-colors">
+                        </div>
+
+                        <!-- Tanggal Keberangkatan -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2" data-i18n="lbl_date">Tanggal Keberangkatan</label>
+                            <input type="date" id="custDate" required class="w-full px-4 py-3 rounded-xl bg-navy-950 border border-slate-700 text-white focus:outline-none focus:border-accent-blue transition-colors">
+                        </div>
+
+                        <!-- Jumlah Orang / Barang -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2" data-i18n="lbl_pax">Jumlah Penumpang / Barang</label>
+                            <input type="text" id="custPax" required placeholder="Contoh: 2 Orang / 1 Paket Dokumen" class="w-full px-4 py-3 rounded-xl bg-navy-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-accent-blue transition-colors">
+                        </div>
+                    </div>
+
+                    <!-- Catatan Tambahan -->
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-2" data-i18n="lbl_notes">Catatan Tambahan (Opsional)</label>
+                        <textarea id="custNotes" rows="3" placeholder="Informasikan detail alamat spesifik atau waktu penjemputan..." class="w-full px-4 py-3 rounded-xl bg-navy-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-accent-blue transition-colors"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-accent-blue hover:bg-accent-hover text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-blue-900/40 transition-all flex items-center justify-center space-x-2">
+                        <i data-lucide="send" class="w-5 h-5"></i>
+                        <span data-i18n="btn_submit_wa">Kirim Pesanan via WhatsApp</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Address Section -->
+    <section id="contact" class="py-16 bg-slate-900 text-white border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <img src="assets/images/logo.jpg" alt="Logo Diwal Transport" class="h-10 w-auto bg-white p-1 rounded">
+                        <h3 class="font-extrabold text-lg text-white">PT DIWAL TRANSPORT PERKASA</h3>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="footer_about">
+                        Perusahaan jasa transportasi darat profesional melayani Carter, Travel Door to Door, Sewa Mobil + Sopir, Drop/Jemput Bandara, dan Pengiriman Barang Instan.
+                    </p>
+                </div>
+
+                <!-- Office Address -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-base text-white border-b border-slate-800 pb-2" data-i18n="footer_addr_heading">Alamat Kantor Resmi</h4>
+                    <div class="flex items-start space-x-3 text-slate-300 text-sm">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-accent-blue shrink-0 mt-0.5"></i>
+                        <span>Kp. Nyomplong No. 44, Bantargebang, Bantargadung, Kab. Sukabumi, Jawa Barat</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-slate-300 text-sm">
+                        <i data-lucide="globe" class="w-5 h-5 text-accent-blue shrink-0"></i>
+                        <a href="https://www.walnesia.com" target="_blank" class="hover:text-blue-400 transition-colors">www.walnesia.com</a>
+                    </div>
+                </div>
+
+                <!-- Contact Channels -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-base text-white border-b border-slate-800 pb-2" data-i18n="footer_contact_heading">Hubungi Kami</h4>
+                    <div class="flex items-center space-x-3 text-slate-300 text-sm">
+                        <i data-lucide="phone" class="w-5 h-5 text-green-400 shrink-0"></i>
+                        <a href="https://wa.me/628568848585" target="_blank" class="hover:text-green-400 transition-colors">08568848585 (Call / WA)</a>
+                    </div>
+                    <div class="flex items-center space-x-3 text-slate-300 text-sm">
+                        <i data-lucide="mail" class="w-5 h-5 text-accent-blue shrink-0"></i>
+                        <a href="mailto:diwaltrans@gmail.com" class="hover:text-blue-400 transition-colors">diwaltrans@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Copyright -->
+    <footer class="bg-navy-950 py-6 text-center text-xs text-slate-500 border-t border-slate-900">
+        <p>&copy; 2026 PT DIWAL TRANSPORT PERKASA (walnesia.com). All rights reserved.</p>
+    </footer>
+
+    <!-- Translation Data & JavaScript -->
+    <script>
+        // Dictionary Data (Indonesian & English)
+        const i18nData = {
+            id: {
+                nav_home: "Beranda",
+                nav_about: "Tentang Kami",
+                nav_services: "Layanan",
+                nav_booking: "Pemesanan",
+                nav_contact: "Kontak",
+                btn_quick_book: "Pesan Sekarang",
+                hero_badge: "Layanan Transportasi & Pengiriman Resmi",
+                hero_title: "Solusi Transportasi Nyaman, Aman, & Tepat Waktu",
+                hero_subtitle: "PT DIWAL TRANSPORT PERKASA melayani perjalanan door to door, drop/jemput bandara, sewa mobil dengan sopir, serta pengiriman barang instan dengan pelayanan profesional.",
+                hero_btn_reserve: "Pesan Perjalanan Sekarang",
+                hero_btn_wa: "WhatsApp 08568848585",
+                about_tag: "PROFIL PERUSAHAAN",
+                about_title: "PT DIWAL TRANSPORT PERKASA",
+                about_desc1: "Kami adalah penyedia jasa transportasi dan logistik darat terpercaya yang berkomitmen penuh memberikan pelayanan terbaik. Berbasis di Sukabumi, kami menjangkau berbagai rute strategis dengan fokus utama pada kenyamanan, keamanan, dan efisiensi waktu perjalanan Anda.",
+                about_desc2: "Baik untuk keperluan pribadi, perjalanan dinas kantor, pengantaran bandara, maupun kebutuhan pengiriman paket instan, pengemudi profesional dan tim operasional kami siap melayani Anda 24 jam nonstop.",
+                about_feat1_title: "Jangkauan Luas",
+                about_feat1_desc: "Sukabumi, Jabodetabek, & antar kota Jawa.",
+                about_feat2_title: "Layanan 24/7",
+                about_feat2_desc: "Siap melayani kebutuhan transportasi kapan saja.",
+                stat_card1_title: "100% Resmi & Terjamin",
+                stat_card1_desc: "Berbadan hukum resmi PT dengan jaminan armada terawat dan pengemudi berpengalaman.",
+                stat_card2_title: "Sopir Profesional",
+                stat_card2_desc: "Pengemudi ramah, paham rute tercepat, serta mengutamakan keselamatan penumpang.",
+                stat_card3_title: "Door to Door",
+                stat_card3_desc: "Jemput langsung di depan alamat rumah Anda dan antar sampai tujuan akhir.",
+                stat_card4_title: "Pengiriman Cepat",
+                stat_card4_desc: "Kirim barang dan dokumen penting langsung sampai pada hari yang sama.",
+                services_tag: "LAYANAN UTAMA",
+                services_title: "Pilihan Layanan Transportasi Kami",
+                services_subtitle: "Solusi lengkap untuk segala jenis kebutuhan mobilitas penumpang dan barang Anda.",
+                s1_title: "Carter / Rent Drop",
+                s1_desc: "Layanan carter privat untuk satu rombongan tanpa gabung penumpang lain. Fleksibel menentukan waktu keberangkatan.",
+                s2_title: "Travel Door to Door",
+                s2_desc: "Perjalanan reguler dengan penjemputan langsung di alamat rumah asal dan pengantaran tepat di depan pintu tujuan.",
+                s3_title: "Sewa Mobil dengan Sopir",
+                s3_desc: "Penyewaan unit lengkap dengan driver berpengalaman untuk perjalanan bisnis, dinas, maupun liburan keluarga.",
+                s4_title: "Drop Bandara",
+                s4_desc: "Pengantaran tepat waktu menuju Bandara Soekarno-Hatta (CGK), Halim Perdanakusuma (HLP), maupun bandara lainnya.",
+                s5_title: "Jemput Bandara",
+                s5_desc: "Layanan penjemputan kedatangan di area pintu kelintasan bandara tanpa perlu repot mencari transportasi umum.",
+                s6_title: "Kirim Barang Instan",
+                s6_desc: "Pengiriman dokumen penting atau paket Kilat Door to Door langsung sampai pada hari yang sama (Same Day Service).",
+                form_title: "Formulir Pemesanan Layanan",
+                form_subtitle: "Isi rute dan kebutuhan Anda di bawah ini untuk terhubung langsung dengan tim kami via WhatsApp.",
+                lbl_name: "Nama Lengkap",
+                lbl_service: "Pilih Layanan",
+                lbl_origin: "Lokasi Penjemputan (Asal)",
+                lbl_destination: "Lokasi Tujuan",
+                lbl_date: "Tanggal Keberangkatan",
+                lbl_pax: "Jumlah Penumpang / Barang",
+                lbl_notes: "Catatan Tambahan (Opsional)",
+                btn_submit_wa: "Kirim Pesanan via WhatsApp",
+                footer_about: "Perusahaan jasa transportasi darat profesional melayani Carter, Travel Door to Door, Sewa Mobil + Sopir, Drop/Jemput Bandara, dan Pengiriman Barang Instan.",
+                footer_addr_heading: "Alamat Kantor Resmi",
+                footer_contact_heading: "Hubungi Kami"
+            },
+            en: {
+                nav_home: "Home",
+                nav_about: "About Us",
+                nav_services: "Services",
+                nav_booking: "Booking",
+                nav_contact: "Contact",
+                btn_quick_book: "Book Now",
+                hero_badge: "Official Transportation & Logistics Service",
+                hero_title: "Comfortable, Safe, & Punctual Transport Solutions",
+                hero_subtitle: "PT DIWAL TRANSPORT PERKASA provides door-to-door travel, airport drop/pick-up, car rental with driver, and instant item delivery with professional service.",
+                hero_btn_reserve: "Book Your Trip Now",
+                hero_btn_wa: "WhatsApp 08568848585",
+                about_tag: "COMPANY PROFILE",
+                about_title: "PT DIWAL TRANSPORT PERKASA",
+                about_desc1: "We are a trusted ground transport and logistics service provider fully committed to delivering excellence. Based in Sukabumi, we connect key strategic routes with a primary focus on comfort, safety, and time efficiency.",
+                about_desc2: "Whether for personal needs, business trips, airport transfers, or instant package deliveries, our professional drivers and operational team are ready to serve you 24/7.",
+                about_feat1_title: "Wide Coverage",
+                about_feat1_desc: "Sukabumi, Greater Jakarta, & intercity Java.",
+                about_feat2_title: "24/7 Service",
+                about_feat2_desc: "Ready to serve your transportation needs anytime.",
+                stat_card1_title: "100% Official & Legal",
+                stat_card1_desc: "Officially registered corporate entity with well-maintained fleet and experienced drivers.",
+                stat_card2_title: "Professional Drivers",
+                stat_card2_desc: "Friendly drivers skilled in finding optimal routes with a strong focus on safety.",
+                stat_card3_title: "Door to Door Service",
+                stat_card3_desc: "Direct pickup right from your doorstep to your exact destination.",
+                stat_card4_title: "Fast Delivery",
+                stat_card4_desc: "Express delivery for packages and urgent documents arriving on the same day.",
+                services_tag: "OUR SERVICES",
+                services_title: "Our Transport Service Options",
+                services_subtitle: "Comprehensive solutions tailored to all your passenger and freight travel needs.",
+                s1_title: "Private Charter / Rent Drop",
+                s1_desc: "Private charter service for your group without sharing with other passengers. Flexible departure times.",
+                s2_title: "Door to Door Travel",
+                s2_desc: "Regular travel service with pickup directly at your home address and drop-off right at your destination.",
+                s3_title: "Car Rental with Driver",
+                s3_desc: "Vehicle rentals accompanied by experienced drivers for business trips, official visits, or family vacations.",
+                s4_title: "Airport Drop-Off",
+                s4_desc: "Punctual transfer services to Soekarno-Hatta (CGK), Halim Perdanakusuma (HLP), or other airports.",
+                s5_title: "Airport Pick-Up",
+                s5_desc: "Convenient arrival pick-up service right outside the terminal doors without hassle.",
+                s6_title: "Instant Item Delivery",
+                s6_desc: "Express Door-to-Door delivery for urgent documents and parcels arriving on the exact same day.",
+                form_title: "Service Reservation Form",
+                form_subtitle: "Fill out your travel details below to connect directly with our dispatch team via WhatsApp.",
+                lbl_name: "Full Name",
+                lbl_service: "Select Service",
+                lbl_origin: "Pickup Location (Origin)",
+                lbl_destination: "Destination Location",
+                lbl_date: "Departure Date",
+                lbl_pax: "Passengers / Quantity",
+                lbl_notes: "Additional Notes (Optional)",
+                btn_submit_wa: "Submit Booking via WhatsApp",
+                footer_about: "Professional ground transportation company serving Charter, Door to Door Travel, Car Rental + Driver, Airport Transfer, and Instant Delivery.",
+                footer_addr_heading: "Official Head Office",
+                footer_contact_heading: "Contact Us"
+            }
+        };
+
+        let currentLang = 'id';
+
+        function updateLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (i18nData[lang] && i18nData[lang][key]) {
+                    element.textContent = i18nData[lang][key];
+                }
+            });
+            document.getElementById('langLabel').textContent = lang === 'id' ? 'EN' : 'ID';
+            document.getElementById('mobileLangLabel').textContent = lang === 'id' ? 'EN' : 'ID';
+        }
+
+        // Language Switcher Listeners
+        document.getElementById('langToggleBtn').addEventListener('click', () => {
+            updateLanguage(currentLang === 'id' ? 'en' : 'id');
+        });
+        document.getElementById('mobileLangToggle').addEventListener('click', () => {
+            updateLanguage(currentLang === 'id' ? 'en' : 'id');
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // WhatsApp Form Handler
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('custName').value.trim();
+            const service = document.getElementById('custService').value;
+            const origin = document.getElementById('custOrigin').value.trim();
+            const destination = document.getElementById('custDestination').value.trim();
+            const date = document.getElementById('custDate').value;
+            const pax = document.getElementById('custPax').value.trim();
+            const notes = document.getElementById('custNotes').value.trim();
+
+            const textMessage = `Halo PT DIWAL TRANSPORT PERKASA, saya ingin memesan layanan:%0A%0A` +
+                `*Nama:* ${encodeURIComponent(name)}%0A` +
+                `*Layanan:* ${encodeURIComponent(service)}%0A` +
+                `*Asal Penjemputan:* ${encodeURIComponent(origin)}%0A` +
+                `*Tujuan:* ${encodeURIComponent(destination)}%0A` +
+                `*Tanggal Keberangkatan:* ${encodeURIComponent(date)}%0A` +
+                `*Jumlah Pax/Barang:* ${encodeURIComponent(pax)}%0A` +
+                (notes ? `*Catatan:* ${encodeURIComponent(notes)}%0A` : '') +
+                `%0AMohon informasi ketersediaan unit dan total biayanya. Terima kasih!`;
+
+            const waUrl = `https://wa.me/628568848585?text=${textMessage}`;
+            window.open(waUrl, '_blank');
+        });
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>
